@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+    }
+    .images {
+      border: 4px solid black;
+      width: 900px;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    img {
+      width: 200px;
+      height: 150px;
+    }
+
+    li {
+      padding: 5px;
+      margin: 5px;
+      border: 2px solid black;
+    }
+  </style>
+  <body>
+    <h2>Image Remover With Li Tag</h2>
+    <div class="images">
+      <li>
+        <img
+          src="https://imgs.search.brave.com/oOhLTStQC6N9oXuJNAuWsddLG6M4e5qVTNeBO_IFlOY/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/cWhtaXQuY29tL3Bp/eC9zdG9jay9odG1s/X3RhZ3NfNTAweDIw/MF8xLmdpZg.jpeg"
+          alt=""
+          class="one"
+        />
+      </li>
+      <li>
+        <img
+          src="https://imgs.search.brave.com/ANHrK-6k21V-dNzDw4gi7ZIukv6ELQhMIFAqXsE0K6w/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/cWhtaXQuY29tL3Bp/eC9zdG9jay9lZGl0/b3JfNTAweDIwMF8x/LnBuZw"
+          alt=""
+          class="two"
+        />
+      </li>
+      <li>
+        <img
+          src="https://imgs.search.brave.com/R2N9r26wN43OYlMTbKFgYJiGz0ZOic9RUU9eX3vyA6Q/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/cWhtaXQuY29tL3Bp/eC9zdG9jay9odG1s/X2V4YW1wbGVzLnBu/Zw"
+          alt=""
+          class="three"
+        />
+      </li>
+      <li>
+        <img
+          src="https://imgs.search.brave.com/1ZU9IqKjLgXei6z35edFDh66T8McmcbXjv4pS90KLOs/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZWVrc2Zvcmdl/ZWtzLm9yZy93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMTAzMjAx/MzAyNDUvaW1hZ2VT/cmMyLnBuZw"
+          alt=""
+          class="four"
+        />
+      </li>
+      <li>
+        <img
+          src="https://imgs.search.brave.com/wuvg5Z2cUXtMp2Cd7vz5wSHcg5WR0u7KqAJ-_Vejs0E/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/cWhtaXQuY29tL3Bp/eC9zdG9jay9odG1s/X3R1dG9yaWFsXzUw/MHgyMDBfMi5naWY.jpeg"
+          alt=""
+          class="five"
+        />
+      </li>
+
+      <li>
+        <img
+          src="https://imgs.search.brave.com/7I2gWeUGyWBZPSFrjhAKdHAW46Ikk4Am7BIM7Bey6ps/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/Y29tcHV0ZXJob3Bl/LmNvbS9qYXJnb24v/aC9pbWcucG5n"
+          alt=""
+          class="six"
+        />
+      </li>
+      <li>
+        <img
+          src="https://imgs.search.brave.com/7Y_37BCdNemmKdB-oWuy_Qbv4NLgYPvROT6cioYGi4w/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/cWhtaXQuY29tL3Bp/eC9zdG9jay9odG1s/X2NvZGVzXzUwMHgy/MDBfMS5naWY.jpeg"
+          alt=""
+          class="seven"
+        />
+      </li>
+      <li>
+        <img
+          src="https://imgs.search.brave.com/A-cf1uWXMOuzftb9prRNs8SQdJ4jU38Smv9by96IvAA/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/cWhtaXQuY29tL3Bp/eC9zdG9jay9odG1s/X3RlbXBsYXRlc181/MDB4MjAwXzMucG5n"
+          alt=""
+          class="eight"
+        />
+      </li>
+      <li>
+        <img
+          src="https://imgs.search.brave.com/pdqofBpay2YRamXk07BsaaD9CKpxq6QVFwAjPhnm2_c/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9ibG9n/Lmh1YnNwb3QuY29t/L2h1YmZzL0dvb2ds/ZSUyMERyaXZlJTIw/SW50ZWdyYXRpb24v/aW1nJTIwaW4lMjBo/dG1sXzYyMDIzLTMu/cG5n"
+          alt=""
+          class="nine"
+        />
+      </li>
+      <li>
+        <img
+          src="https://imgs.search.brave.com/iudIMRBiT9uGObGz9tK6Cail7uSkux2_FDiKJwfMjis/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZWVrc2Zvcmdl/ZWtzLm9yZy9pbWct/cHJhY3RpY2UvcHJv/ZC9jb3Vyc2VzLzE2/OTkzNDI4NzEvV2Vi/L0NvbnRlbnQvSmF2/YS1iYWNrZW5kLWxp/dmUtdGh1bWJuYWls/LndlYnA"
+          alt=""
+          class="ten"
+        />
+      </li>
+    </div>
+  </body>
+  <script>
+    const imagesdiv = document.querySelector(".images");
+    imagesdiv.addEventListener("click", (e) => {
+      const imgLi = e.target.parentNode;
+      //  console.log(e.target.tagName);
+      if (e.target.tagName === "IMG") imgLi.remove();
+      // imgLi.parentNode.removeChild(imgLi);
+    });
+  </script>
+</html>

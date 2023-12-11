@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copy to Clipboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="copy.css" />
+  </head>
+  <body>
+    <!-- code 1 -->
+    <div class="copyContainer">
+      <pre class="codeBlock">
+        className=class|| id=id
+        </pre
+      >
+      <button class="copyButton" onclick="copyToClipboard(this)">
+        <i class="fas fa-copy"></i>
+      </button>
+      <div class="tooltip">Copied!</div>
+    </div>
+    <!-- code 2 -->
+    <div class="copyContainer">
+      <pre class="codeBlock">
+          // Code Block 2
+          function example2() {
+            console.log("Hello from Code Block 3!");
+          }
+        </pre
+      >
+      <button class="copyButton" onclick="copyToClipboard(this)">
+        <i class="fas fa-copy"></i>
+      </button>
+      <div class="tooltip">Copied!</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="copy.js"></script>
+  </body>
+</html>

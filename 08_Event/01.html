@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .hero {
+      border: 4px solid black;
+      width: 300px;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px auto;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="hero">
+      <p>Chai Aur Code_Event propogation Dhang se padna padega</p>
+      <img
+        src="https://imgs.search.brave.com/M70bF5kWS8MjTTZoDOrdRQPXI5GCLwn_AgWWAeHa-YQ/rs:fit:500:0:0/g:ce/aHR0cDovL2xnaW1h/Z2VzLnMzLmFtYXpv/bmF3cy5jb20vZGF0/YS9pbWFnZW1hbmFn/ZXIvNzU2NS9wdXp6/bGUzMDAuanBn"
+        alt=""
+        id="one"
+        width="300px"
+        height="130px"
+      />
+      <hr />
+      <img
+        src="https://imgs.search.brave.com/dtiU7SUGjRFqlFr5wjScqCrIfNZ9LI7LxeVl_Qgia9M/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuYWxsLWZyZWUt/ZG93bmxvYWQuY29t/L2ltYWdlcy9ncmFw/aGljbGFyZ2UvbmF0/dXJlX2JhY2tkcm9w/X3BpY3R1cmVfYnJp/Z2h0X2Nsb3NldXBf/YnV0dGVyZmx5X2xl/YXZlc182OTMxODMz/LmpwZw"
+        alt=""
+        id="two"
+        width="300px"
+        height="130px"
+        onclick='alert("second image Clicked Dontuse html insection")'
+      />
+      <hr />
+      <img
+        src="https://imgs.search.brave.com/aVuejDGfPlCaHYd88GGlhQnluQBFu24crcvtrCNBcL8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9yZXMu/Y2xvdWRpbmFyeS5j/b20vaGN0aS9pbWFn/ZS9mZXRjaC9jX2xp/bWl0LGZfYXV0byxx/X2F1dG86Z29vZCx3/XzgwMC9odHRwczov/L2RvY3MuaHRtbGNz/c3RvaW1hZ2UuY29t/L2Fzc2V0cy9pbWFn/ZXMvdzQwMC5qcGVn"
+        alt=""
+        id="three"
+        width="300px"
+        height="130px"
+      />
+      <hr />
+      <img
+        src="https://imgs.search.brave.com/UeYajsacnVEDY9Wy8TPhiWqhM9GEABREFfEw0I5sEu8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9kcnVw/YWwudHJpbml0eS5k/dWtlLmVkdS9zaXRl/cy9kcnVwYWwudHJp/bml0eS5kdWtlLmVk/dS9maWxlcy9zdHls/ZXMvb3JpZ2luYWxf/YXNwZWN0X3JhdGlv/L3B1YmxpYy9pbWFn/ZXMvcGFyYWdyYXBo/LXNlbGVjdC1tZW51/LTIwMHB4LnBuZz9p/dG9rPU90a09LRzBx"
+        alt=""
+        id="four"
+        width="300px"
+        height="130px"
+      />
+      <hr />
+      <img
+        src="https://imgs.search.brave.com/eRKAQBWKjrRtHSMkDU18HUM-72Fc-Ivc_6y2-R3MM9w/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuYWxsLWZyZWUt/ZG93bmxvYWQuY29t/L2ltYWdlcy9ncmFw/aGljbGFyZ2UvbmF0/dXJlX3BpY3R1cmVf/ZWxlZ2FudF9jbG9z/ZXVwX2J1dHRlcmZs/eV9wZXJjaGluZ19i/b3RhbnlfNjkzMTgy/OS5qcGc"
+        alt=""
+        id="five"
+        width="300px"
+        height="130px"
+      />
+      <hr />
+    </div>
+  </body>
+  <script>
+    // Not Recommened
+    const oneImg = document.querySelector("#one");
+    oneImg.onclick = () => {
+      alert("First image Clicked - using onclick but Not recommened");
+    };
+
+    // syntax:addEventListener("method",function,propogation:true/false(default))
+    const threeImg = document.querySelector("#three");
+    threeImg.addEventListener(
+      "click",
+      () => {
+        alert("Third image Clicked - using AddEventListener");
+      },
+      false
+    );
+
+    const fourImg = document.querySelector("#four");
+    fourImg.addEventListener(
+      "click",
+      (e) => {
+        // console.log(e);
+        console.log("clicked on Fourth Image");
+        e.stopPropagation(); //always run with false
+        // alert(e);
+        // Event:-type, timeStamp, preventDefault
+        //target,toElement,srcElement,currentTarget
+        //clientX,clientY,screenX,screenY
+        //altKey,ctrlKey,shiftKey,keyCode
+      },
+      false
+    );
+    const hero = document.querySelector(".hero");
+    hero.addEventListener(
+      "click",
+      (e) => {
+        console.log("clicked on Div");
+      },
+      false
+    );
+  </script>
+</html>

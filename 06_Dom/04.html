@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    // <+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>
+    // <------------ Create new Element Via Function------------->
+    // <+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>
+
+    const AddLang = function (lang) {
+      const myList = document.createElement("li");
+      const myLang = document.createTextNode(lang);
+
+      // Append the text node to the list item
+      myList.appendChild(myLang);
+
+      const myUOList = document.querySelector(".language");
+      myUOList.appendChild(myList);
+    };
+
+    AddLang("Typescript");
+    AddLang("Python");
+    AddLang("Java");
+
+    // <+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>
+    // <------------ Edit Element ------------->
+    // <+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>
+    const secondEl = document.querySelector("li:nth-child(2)");
+    const newLiText = document.createTextNode("Mojo");
+    const newLi = document.createElement("li");
+    newLi.appendChild(newLiText);
+    secondEl.replaceWith(newLi);
+
+    const firstEl = document.querySelector("li:first-child");
+    // firstEl.innerHTML = "<li>Html</li>";
+    // firstEl.outerHTML = "<li>Http</li>";
+
+    // <+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>
+    // <------------ Remove Element ------------->
+    // <+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>
+    const lastEl = document.querySelector("li:last-child");
+    lastEl.remove();
+  </script>
+</html>

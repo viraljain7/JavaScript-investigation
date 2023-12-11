@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // <------------ Create new Element------------->
+
+    // Create a new div element
+    let div = document.createElement("div");
+
+    // div.className = "mylist"; //not to use
+    // div.id = "myid"; //because of overwrite property
+    // div.innerHTML = "Custom Div"; //not good of performance of website
+
+    // Set attributes for the div
+    div.setAttribute("title", "generated Title");
+    div.setAttribute("id", "myId");
+    div.setAttribute("class", "mylist");
+
+    // Set styles for the div
+    div.style.backgroundColor = "red";
+    div.style.padding = "10px";
+
+    // Create a text node with the content "Chai Aur Code"
+    let addText = document.createTextNode("Chai Aur Code");
+
+    // Append the text node to the div
+    div.appendChild(addText);
+
+    // Append the div to the body of the HTML document
+    document.body.appendChild(div);
+
+    // Log the div to the console
+    console.log(div);
+  </script>
+</html>
