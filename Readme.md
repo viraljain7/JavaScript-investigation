@@ -1,6 +1,6 @@
 # JavaScript-investigation-
 
 hof
-refuce map filter
+reduce map filter
 event
 async await
