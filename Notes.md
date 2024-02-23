@@ -360,3 +360,46 @@ const sub3 = str.substr(6); // "World" (No length specified)
 - slice() and substring() are similar but differ in how they handle negative indexes and out-of-order arguments.
 - substr() uses a start index and a length rather than start and end indexes.
 - Choose the appropriate method based on your specific requirements for extracting substrings in JavaScript.
+
+## Maths & Number (video 12)
+
+```js
+// Number and Math Operations in JavaScript
+
+// Defining Number Variables
+const score = 1000234.2665;
+const balance = new Number(200); // Object (explicitly defined as type 'number')
+console.log(score, balance);
+console.log(typeof score, typeof balance); // Output: number, object
+
+// Converting Number to String and Obtaining String Length
+console.log(score.toString().length); // Output: 11 (length of string representation)
+// Formatting Numbers
+console.log(score.toFixed(3)); // Output: "1000234.267" (fixed to 3 decimal places)
+console.log(score.toPrecision(3)); // Output: "1.00e+6" (fixed precision with exponential notation)
+console.log(score.toPrecision(6)); // Output: "1000230" (rounds off and prioritizes the number of digits)
+console.log(score.toLocaleString("en-in")); // Output: "10,00,234.2665" (formatted based on locale)
+```
+
+```js
+let rupay = 12203494;
+console.log(rupay.toLocaleString("en-in")); // output: 1,22,03,494
+console.log(rupay.toLocaleString()); // output : 12,203,494
+```
+
+```js
+// Math Operations
+console.log(Math);
+console.log(Math.abs(-3)); // Output: 3 (absolute value)
+console.log(Math.round(34.43)); // Output: 34 (round to the nearest integer)
+console.log(Math.ceil(3.4)); // Output: 4 (round up to the nearest integer)
+console.log(Math.floor(3.9)); // Output: 3 (round down to the nearest integer)
+console.log(Math.min(12, 4, 6)); // Output: 4 (find minimum value)
+console.log(Math.max(2, 4, 6, 7, 0)); // Output: 7 (find maximum value)
+console.log(Math.random()); // Output: Random number between 0 and 1 (exclusive)
+
+// Generating Random Integer within a Range
+let min = 0;
+let max = 10;
+console.log(Math.floor(Math.random() * (max - min + 1) + min)); // Output: Random integer between 0 and 10 (inclusive)
+```

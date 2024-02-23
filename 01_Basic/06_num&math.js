@@ -1,5 +1,5 @@
 const score = 1000234.2665;
-const balance = new Number(200); //object
+const balance = new Number(200); //object  <---------explicitly define type =number-------->
 console.log(score, balance);
 console.log(typeof score, typeof balance);
 
@@ -7,7 +7,10 @@ console.log(score.toString().length);
 console.log(score.toFixed(3)); //fixed number of dicimal digit
 console.log(score.toPrecision(3)); //fixed number of dicimal digit
 console.log(score.toPrecision(6)); //round off number then prioritize to number of digit
-console.log(score.toLocaleString("en-in"));
+
+let rupay = 12203494;
+console.log(rupay.toLocaleString("en-in"));
+console.log(rupay.toLocaleString());
 
 //  ++++++++++++++++   Maths   ++++++++++++
 console.log(Math);
