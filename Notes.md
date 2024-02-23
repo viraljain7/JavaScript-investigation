@@ -5,12 +5,13 @@ reduce map filter
 event
 async await
 
-## Resource :
+# Resource :
 
 - tc39.es
 - mdnjs
+-
 
-## 01 Basics
+# 01 Basics
 
 ## Understanding `var` ,`let` and `const` in JavaScript (video 4)
 
@@ -403,3 +404,114 @@ let min = 0;
 let max = 10;
 console.log(Math.floor(Math.random() * (max - min + 1) + min)); // Output: Random integer between 0 and 10 (inclusive)
 ```
+
+## Dates (Video 13)
+
+```js
+let date = new Date(); //current date
+console.log(date); // 2024-02-20T10:51:41.984Z
+
+console.log(date.toString()); // Mon Feb 19 2024 22:51:41 GMT+0200 (Eastern European Standard Time)
+
+console.log(date.toDateString()); // Mon Feb 19 2024
+
+console.log(date.toLocaleDateString()); // 2/19/2024, 10:51:41 AM
+
+console.log(typeof date); // object
+```
+
+```js
+// Custom Date
+let customDate = new Date(2023, 11, 23); //23/12/2023
+let customDate1 = new Date(2023, 11, 23, 23, 59, 59); //23/12/2023 at 23:59:59
+let customDate2 = new Date("2023-11-23"); //23/12/2023 yy/mm/dd
+let customDate3 = new Date("11-30-2023"); //30/12/2023 mm/dd/yy
+
+console.log(customDate.toLocaleDateString()); // 12/23/2023
+
+console.log(customDate1.toString()); // Sun Dec 24 2023 00:00:00 GMT+0200 (Eastern European Standard Time)
+
+console.log(customDate2.toLocaleDateString()); // 12/23/2023
+
+console.log(customDate3.toLocaleDateString()); // 12/30/2023
+```
+
+```js
+// TimeStamp
+let myTimeStamp = Date.now(); //Exact Date & Time
+
+console.log(myTimeStamp); // 1719265901984
+
+// console.log(myTimeStamp.toLocaleDateString());//Not working
+
+console.log(Math.floor(myTimeStamp / 1000)); // 1719265901
+```
+
+```js
+//get Day,date,time,month,year
+let MyDate = new Date(2023, 11, 23, 23, 59, 59); //23/12/2023 at 23:59:59
+
+console.log(
+  `custom date is ${MyDate.getDate()}/${
+    MyDate.getMonth() + 1
+  }/${MyDate.getFullYear()} @ ${MyDate.getHours()}:${MyDate.getMinutes()}:${MyDate.getSeconds()} Day:${MyDate.getDay()} `
+); // custom date is 23/12/2023 @ 23:59:59 Day:6
+
+console.log(MyDate.getHours()); // 23
+
+console.log(MyDate.getMinutes()); // 59
+
+console.log(MyDate.getSeconds()); // 59
+
+console.log(MyDate.getDay()); // 6
+
+console.log(MyDate.getDate()); // 23
+
+console.log(MyDate.getMonth() + 1); // 12
+
+console.log(MyDate.getFullYear()); // 2023
+```
+
+## Output with Console and Markdown Notes
+
+- `new Date()`: Returns the current date and time.
+
+  - Output: 2024-02-20T10:51:41.984Z
+  - Explanation: This line creates a new `Date` object representing the current date and time.
+
+- `console.log(date);`: Output the current date and time.
+
+  - Output: Mon Feb 19 2024 22:51:41 GMT+0200 (Eastern European Standard Time)
+  - Explanation: This line logs the current date and time to the console in string format.
+
+- `console.log(date.toDateString());`: Output the date only.
+
+  - Output: Mon Feb 19 2024
+  - Explanation: This line logs only the date portion of the current date to the console.
+
+- `console.log(date.toLocaleDateString());`: Output the date and time only.
+
+  - Output: 2/19/2024, 10:51:41 AM
+  - Explanation: This line logs the localized date and time to the console.
+
+- `console.log(typeof date);`: Output the data type of `date`, which is an object.
+
+  - Output: object
+  - Explanation: This line logs the data type of the `date` object to the console.
+
+- **Custom Dates**:
+
+  - Custom dates can be created by passing specific parameters to the `Date` constructor.
+  - Various formats are supported, including specifying the year, month, day, hour, minute, and second.
+  - Examples are provided with different date formats, including the use of `new Date()` with specific date strings.
+    - Output: 12/23/2023, Sun Dec 24 2023 00:00:00 GMT+0200 (Eastern European Standard Time), 12/23/2023, 12/30/2023
+
+- **TimeStamp**:
+
+  - `Date.now()`: Returns the number of milliseconds elapsed since January 1, 1970, 00:00:00 UTC.
+  - Math operations are performed to convert milliseconds to seconds.
+    - Output: 1719265901984, 1719265901
+
+- **Get Date, Time, and Components**:
+
+  - Methods like `getDate()`, `getMonth()`, `getFullYear()`, `getHours()`, `getMinutes()`, `getSeconds()`, and `
