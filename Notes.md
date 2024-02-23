@@ -113,3 +113,34 @@ console.log(+{}); // Output: NaN (empty object converted to NaN)
 - ToString:
   - NaN converts to "NaN"
   - undefined converts to "undefined"
+
+## Operation & Comparision (video 7)
+
+```js
+// JavaScript Type Coercion and Comparison
+
+// Type Coercion in JavaScript
+console.log("2" + 1); // Output: "21" (string concatenation)
+console.log(2 + "1" + 2); // Output: "212" (string concatenation)
+console.log(2 + 4 + "1"); // Output: "61" (string concatenation)
+console.log("2" > 1); // Output: true (string "2" converted to number 2 for comparison)
+console.log("02" > 1); // Output: true (string "02" converted to number 2 for comparison)
+console.log("2" === 2); // Output: false (strict equality check, different types)
+console.log(null < 0); // Output: false (null coerced to number 0 for comparison)
+console.log(null == 0); // Output: false (null is not equal to 0, different types)
+console.log(null <= 0); // Output: true (null coerced to number 0 for comparison)
+console.log(null >= 0); // Output: true (null coerced to number 0 for comparison)
+console.log(undefined <= 0); // Output: false (undefined cannot be compared with numbers)
+console.log(undefined >= 0); // Output: false (undefined cannot be compared with numbers)
+console.log(undefined == 0); // Output: false (undefined cannot be compared with numbers)
+```
+
+### Notes:
+
+- JavaScript performs type coercion when operands of different types are used together.
+- String concatenation occurs when the "+" operator is used with strings.
+- Comparison operators convert operands to numbers or strings depending on the context.
+- Strict equality (===) checks both value and type, while loose equality (==) only checks value.
+- Null is treated as 0 in numeric comparisons, but undefined does not have a well-defined behavior in comparisons with numbers.
+- Comparing undefined with any number always results in false.
+- Be cautious with loose equality (==) as it can lead to unexpected behavior due to type coercion.
