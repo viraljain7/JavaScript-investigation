@@ -228,3 +228,135 @@ console.table([
   typeof myfun, // "object function" <-------IMP------->
 ]);
 ```
+
+## String in JS( video 11)
+
+```js
+// JavaScript String Operations
+
+// Defining Variables
+let name = "viral";
+let oldName = new String("kadamjain"); // Using String object
+let RollNo = 234;
+```
+
+```js
+// String Interpolation
+console.log(`My name is ${name} [${oldName}] and roll number is ${RollNo}`);
+```
+
+```js
+// String Length
+console.log(oldName.length); // Output: 9
+```
+
+```js
+// Converting to Uppercase
+console.log(oldName.toUpperCase()); // Output: KADAMJAIN
+```
+
+```js
+// Accessing Characters
+console.log(oldName.charAt(3)); // Output: m
+```
+
+```js
+// Finding Substrings
+console.log(oldName.indexOf("d")); // Output: 5
+```
+
+```js
+// Substring Extraction
+const str = oldName.substring(2, 4); // "da"
+console.log(str);
+```
+
+```js
+// Using Slice Method
+const mystr = oldName.slice(-5, -3); // "ja"
+console.log(mystr);
+```
+
+```js
+// Trimming Whitespaces
+const mytrim = "   viral20%dk    ";
+console.log(mytrim.trim()); // Output: "viral20%dk"
+console.log(mytrim.trimStart()); // Output: "viral20%dk    "
+console.log(mytrim.trimEnd()); // Output: "   viral20%dk"
+```
+
+```js
+// Replacing Substrings
+console.log(mytrim.replace("20%", "_")); // Output: "   viral_dk    "
+```
+
+```js
+// Checking for Substrings
+console.log(mytrim.includes("20%")); // Output: true
+```
+
+```js
+// Splitting Strings
+console.log(mytrim.split("20%")); // Output: ["   viral", "dk    "]
+```
+
+## JavaScript String Extraction Methods
+
+### 1. slice(startIndex, endIndex)
+
+- Extracts a portion of a string and returns it as a new string.
+- **Key Points:**
+  - `startIndex`: The index at which to begin extraction (inclusive).
+  - `endIndex`: The index before which to end extraction (exclusive).
+  - If `endIndex` is omitted, extraction continues to the end of the string.
+  - Negative indexes count from the end of the string.
+- **Examples:**
+  ```javascript
+  const str = "Hello World";
+  const sliced1 = str.slice(0, 5); // "Hello"
+  const sliced2 = str.slice(-5); // "World"
+  const sliced3 = str.slice(6); // "World"
+  ```
+
+### 2. substring(startIndex, endIndex)
+
+- Extracts a portion of a string and returns it as a new string.
+- **Key Points:**
+  - `startIndex:` The index at which to begin extraction (inclusive).
+  - `endIndex`: The index before which to end extraction (exclusive).
+  - If `endIndex` is omitted or less than startIndex, arguments are swapped.
+  - Negative indexes are treated as 0.
+    Examples:
+
+```javascript
+const str = "Hello World";
+const sub1 = str.substring(6, 11); // "World"
+const sub2 = str.substring(11, 6); // "World" (Arguments swapped)
+const sub3 = str.substring(-5); // "Hello World" (Treated as 0)
+```
+
+### 3. substr(startIndex, length)
+
+Extracts a specified number of characters from a string.
+
+**Key Points:**
+
+- `startIndex`: The index at which to begin extraction (inclusive).
+- `length`: The number of characters to extract.
+- If `length` is omitted, extraction continues to the end of the string.
+- Negative `startIndex` counts from the end of the string.
+
+### Examples:
+
+```javascript
+const str = "Hello World";
+const sub1 = str.substr(6, 5); // "World"
+const sub2 = str.substr(-5); // "World" (Negative startIndex)
+const sub3 = str.substr(6); // "World" (No length specified)
+```
+
+### Summary:
+
+- slice() and substring() are similar but differ in how they handle negative indexes and out-of-order arguments.
+- substr() uses a start index and a length rather than start and end indexes.
+- Choose the appropriate method based on your specific requirements for extracting substrings in JavaScript.
