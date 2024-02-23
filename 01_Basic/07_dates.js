@@ -1,8 +1,12 @@
 let date = new Date(); //current date
-console.log(date);
+console.log(date); //
+// 2024-02-20T10:51:41.984Z
 console.log(date.toString());
+// Mon Feb 19 2024 22:51:41 GMT+0200 (Eastern European Standard Time)
 console.log(date.toDateString()); //date only
+// Mon Feb 19 2024
 console.log(date.toLocaleDateString()); //date & time only
+// 2/19/2024, 10:51:41 AM
 console.log(typeof date); //object
 
 // Custom Date
