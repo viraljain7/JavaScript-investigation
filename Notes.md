@@ -166,7 +166,7 @@ Reference (Non-primitive) Datatypes (stored in heap memory):
 
 - Array(Object) <-------IMP------->
 - Object
-- Function
+- Function (object function)
 
 ```js
 let name = "viral"; // string
@@ -182,8 +182,9 @@ let myobj = {
   name: "viral",
   salary: 10000,
 }; // Object
-let myfun = () => {
-  return "hello"; // Function
+
+let myfun = function () {
+  return "hello"; // object function
 };
 
 // Displaying Values
@@ -202,6 +203,6 @@ console.table([
   typeof sy, // "symbol"
   typeof arr, // "object" <-------IMP------->
   typeof myobj, // "object"
-  typeof myfun, // "function" <-------IMP------->
+  typeof myfun, // "object function" <-------IMP------->
 ]);
 ```
