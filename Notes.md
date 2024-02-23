@@ -15,11 +15,11 @@ async await
 ## Understanding `var` ,`let` and `const` in JavaScript (video 4)
 
 ```js
-const accId = 2345;
+const accId = 2345; // accId is constant
 let accEmail = "abc@gmail.com";
-var accIndex = 3; //Prefer to not use var because of issue in block  scope and functional scope
+var accIndex = 3; // Prefer not to use var because of issues with block scope and function scope
 
-accCity = "sabla"; //Not recommoned
+accCity = "sabla"; // Not recommended, creates a global variable
 
 console.table([accId, accEmail, accIndex, accCity]);
 
@@ -45,23 +45,27 @@ console.log(nonExistentVariable);
 
 ## Datatypes in JS (video 5)
 
-## Data Types:
+## `Data Types`:
 
-- number
-- BigInt (number which exceed 2^52)
-- String
-- null (Standalone Value, but datatype is object and value is empty)
-- undefined
-- Boolean
-- Symbol (unique)
-  Object
+- `number`
+- `BigInt` (number which exceed 2^52)
+- `String`
+- `null` (Standalone Value, but datatype is object and value is empty)
+- `undefined`
+- `Boolean`
+- `Symbol `(unique)
+- `Object`
 
 ```js
 "use strict"; // treat all JS Code as new version
+```
 
+```js
 let sy = Symbol("12");
 let bIgInt = 123456n;
+```
 
+```js
 console.table([
   typeof undefined, //undefined
   typeof null, //object
@@ -80,18 +84,26 @@ console.table([
 // Converting Strings to Numbers
 let rollNo = "11abc";
 rollNo = Number(rollNo); // "11abc" converted to NaN
+```
 
+```js
 let No = "11";
 No = Number(No); // "11" converted to 11
+```
 
+```js
 console.table([rollNo, No]); // Output: [ NaN, 11 ]
+```
 
+```js
 // Converting Values to Strings
 let a = String(NaN); // NaN converted to "NaN"
 let b = String(undefined); // undefined converted to "undefined"
 
 console.log(a, b); // Output: "NaN undefined"
+```
 
+```js
 // Unary Plus Operator (+) for Implicit Type Conversion
 console.log(+true); // Output: 1 (true converted to 1)
 console.log(+""); // Output: 0 (empty string converted to 0)
@@ -102,16 +114,16 @@ console.log(+{}); // Output: NaN (empty object converted to NaN)
 
 ### Type Conversion Summary:
 
-- ToNumber:
+- `ToNumber:`
   - "11abc" converts to NaN
   - "11" converts to 11
   - undefined converts to NaN
   - true converts to 1
   - false converts to 0
-- ToBoolean:
+- `ToBoolean:`
   - Any non-empty string converts to true
   - Empty string converts to false
-- ToString:
+- `ToString:`
   - NaN converts to "NaN"
   - undefined converts to "undefined"
 
@@ -126,13 +138,22 @@ console.log(+{}); // Output: NaN (empty object converted to NaN)
 console.log("2" + 1); // Output: "21" (string concatenation)
 console.log(2 + "1" + 2); // Output: "212" (string concatenation)
 console.log(2 + 4 + "1"); // Output: "61" (string concatenation)
+```
+
+```js
 console.log("2" > 1); // Output: true (string "2" converted to number 2 for comparison)
 console.log("02" > 1); // Output: true (string "02" converted to number 2 for comparison)
 console.log("2" === 2); // Output: false (strict equality check, different types)
+```
+
+```js
 console.log(null < 0); // Output: false (null coerced to number 0 for comparison)
 console.log(null == 0); // Output: false (null is not equal to 0, different types)
 console.log(null <= 0); // Output: true (null coerced to number 0 for comparison)
 console.log(null >= 0); // Output: true (null coerced to number 0 for comparison)
+```
+
+```js
 console.log(undefined <= 0); // Output: false (undefined cannot be compared with numbers)
 console.log(undefined >= 0); // Output: false (undefined cannot be compared with numbers)
 console.log(undefined == 0); // Output: false (undefined cannot be compared with numbers)
@@ -143,16 +164,16 @@ console.log(undefined == 0); // Output: false (undefined cannot be compared with
 - JavaScript performs type coercion when operands of different types are used together.
 - String concatenation occurs when the "+" operator is used with strings.
 - Comparison operators convert operands to numbers or strings depending on the context.
-- Strict equality (===) checks both value and type, while loose equality (==) only checks value.
+- `Strict equality (===)` checks both value and type, while loose `equality (==)` only checks value.
 - Null is treated as 0 in numeric comparisons, but undefined does not have a well-defined behavior in comparisons with numbers.
 - Comparing undefined with any number always results in false.
-- Be cautious with loose equality (==) as it can lead to unexpected behavior due to type coercion.
+- Be cautious with loose `equality (==)` as it can lead to unexpected behavior due to type coercion.
 
 ## Datatypes Summary (video 9)
 
 ### Datatypes in JavaScript
 
-Primitive Datatypes (stored in stack memory):
+`Primitive` Datatypes `(stored in stack memory)`:
 
 - string
 - number
@@ -162,7 +183,7 @@ Primitive Datatypes (stored in stack memory):
 - null
 - Symbol
 
-Reference (Non-primitive) Datatypes (stored in heap memory):
+`Reference (Non-primitive)` Datatypes `(stored in heap memory)`:
 
 - Array(Object) <-------IMP------->
 - Object
@@ -176,22 +197,23 @@ let bignum = 1234567890n; // BigInt
 let don; // undefined
 let done = null; // null
 let sy = Symbol("se"); // Symbol
+```
 
-let arr = [1, 2, "ram", true]; // Array
+```js
+let arr = [1, 2, "ram", true]; // Object
 let myobj = {
   name: "viral",
   salary: 10000,
 }; // Object
+```
 
+```js
 let myfun = function () {
   return "hello"; // object function
 };
+```
 
-// Displaying Values
-
-console.table([name, num, logged, bignum, don, done, sy]); // Displaying values
-console.log(arr, myobj, myfun()); // Displaying values
-
+```js
 // Displaying Types
 console.table([
   typeof name, // "string"
