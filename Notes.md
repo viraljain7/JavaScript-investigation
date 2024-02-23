@@ -45,18 +45,19 @@ console.log(nonExistentVariable);
 
 ## Datatypes in JS (video 5)
 
+## Data Types:
+
+- number
+- BigInt (number which exceed 2^52)
+- String
+- null (Standalone Value, but datatype is object and value is empty)
+- undefined
+- Boolean
+- Symbol (unique)
+  Object
+
 ```js
 "use strict"; // treat all JS Code as new version
-
-// Data Types:
-// - number
-// - BigInt (number which exceed 2^52)
-// - String
-// - null (Standalone Value, but datatype is object  and value is empty)
-// - undefined
-// - Boolean
-// - Symbol (unique)
-// Object
 
 let sy = Symbol("12");
 let bIgInt = 123456n;
@@ -73,9 +74,9 @@ console.table([
 
 ## Conversion (vidoe 6)
 
-```js
-// Converting Values in JavaScript
+## Converting Values in JavaScript
 
+```js
 // Converting Strings to Numbers
 let rollNo = "11abc";
 rollNo = Number(rollNo); // "11abc" converted to NaN
@@ -137,7 +138,7 @@ console.log(undefined >= 0); // Output: false (undefined cannot be compared with
 console.log(undefined == 0); // Output: false (undefined cannot be compared with numbers)
 ```
 
-### Notes:
+### Notes: <-------IMP------->
 
 - JavaScript performs type coercion when operands of different types are used together.
 - String concatenation occurs when the "+" operator is used with strings.
@@ -146,3 +147,61 @@ console.log(undefined == 0); // Output: false (undefined cannot be compared with
 - Null is treated as 0 in numeric comparisons, but undefined does not have a well-defined behavior in comparisons with numbers.
 - Comparing undefined with any number always results in false.
 - Be cautious with loose equality (==) as it can lead to unexpected behavior due to type coercion.
+
+## Datatypes Summary (video 9)
+
+### Datatypes in JavaScript
+
+Primitive Datatypes (stored in stack memory):
+
+- string
+- number
+- boolean
+- BigInt
+- undefined
+- null
+- Symbol
+
+Reference (Non-primitive) Datatypes (stored in heap memory):
+
+- Array(Object) <-------IMP------->
+- Object
+- Function
+
+```js
+let name = "viral"; // string
+let num = 34; // number
+let logged = false; // boolean
+let bignum = 1234567890n; // BigInt
+let don; // undefined
+let done = null; // null
+let sy = Symbol("se"); // Symbol
+
+let arr = [1, 2, "ram", true]; // Array
+let myobj = {
+  name: "viral",
+  salary: 10000,
+}; // Object
+let myfun = () => {
+  return "hello"; // Function
+};
+
+// Displaying Values
+
+console.table([name, num, logged, bignum, don, done, sy]); // Displaying values
+console.log(arr, myobj, myfun()); // Displaying values
+
+// Displaying Types
+console.table([
+  typeof name, // "string"
+  typeof num, // "number"
+  typeof logged, // "boolean"
+  typeof bignum, // "bigint"
+  typeof don, // "undefined"
+  typeof done, // "object"
+  typeof sy, // "symbol"
+  typeof arr, // "object" <-------IMP------->
+  typeof myobj, // "object"
+  typeof myfun, // "function" <-------IMP------->
+]);
+```
