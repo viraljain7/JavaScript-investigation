@@ -7,7 +7,7 @@ async await
 
 ## 01 Basics
 
-## Understanding `var` ,`let` and `const` in JavaScript
+## Understanding `var` ,`let` and `const` in JavaScript (video 4)
 
 ```js
 const accId = 2345;
