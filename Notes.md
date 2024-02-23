@@ -5,6 +5,11 @@ reduce map filter
 event
 async await
 
+## Resource :
+
+- tc39.es
+- mdnjs
+
 ## 01 Basics
 
 ## Understanding `var` ,`let` and `const` in JavaScript (video 4)
@@ -36,4 +41,32 @@ console.log(variable); // Output: undefined
 ```js
 console.log(nonExistentVariable);
 // ReferenceError: nonExistentVariable is not defined
+```
+
+## Datatypes in JS (video 5)
+
+```js
+"use strict"; // treat all JS Code as new version
+
+// Data Types:
+// - number
+// - BigInt (number which exceed 2^52)
+// - String
+// - null (Standalone Value, but datatype is object  and value is empty)
+// - undefined
+// - Boolean
+// - Symbol (unique)
+// Object
+
+let sy = Symbol("12");
+let bIgInt = 123456n;
+
+console.table([
+  typeof undefined, //undefined
+  typeof null, //object
+  sy, //symbol(12)
+  typeof sy, //symbol
+  bIgInt, //123456n
+  typeof bIgInt, //bigint
+]);
 ```
