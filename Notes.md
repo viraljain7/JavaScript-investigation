@@ -116,6 +116,8 @@ console.log(+{}); // Output: NaN (empty object converted to NaN)
 
 ## Operation & Comparision (video 7)
 
+## JavaScript Type Coercion and Comparison
+
 ```js
 // JavaScript Type Coercion and Comparison
 
