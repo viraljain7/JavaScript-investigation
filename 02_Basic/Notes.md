@@ -105,3 +105,43 @@ let score1 = 1,
   score3 = 4;
 console.log(Array.of(score1, score2, score3)); // Output: [ 1, 2, 4 ]
 ```
+
+## Object part 1 (video16)
+
+```js
+// singleton - constructor
+// Object.create
+
+// Object Literals
+const mysymbol = Symbol("abc"); // Must be declared in order to use in object
+
+const JsUser = {
+  [mysymbol]: "myownkey", // Symbol <---important--->
+  name: "viral",
+  "Full name": "viral jain",
+  lastLoggedIn: ["Mon", "Tue"],
+  // way 1
+  greeting: function () {
+    console.log("====================================");
+    console.log(`${this.name}`);
+    console.log("====================================");
+  },
+};
+
+// way 2
+jsUser.hello = function () {
+  console.log("Hello");
+};
+
+console.log(JsUser.name); // Output: viral
+console.log(JsUser["Full name"]); // Output: viral jain
+console.log(JsUser[mysymbol]); // Output: myownkey
+console.log(typeof JsUser[mysymbol]); // Output: string
+console.log(JsUser.greeting()); // Output: "viral"
+
+JsUser.name = "abc";
+Object.freeze(JsUser); // Used to freeze the object
+
+JsUser.name = "abcdee"; // Not able to change object property
+console.log(JsUser); // Output: { [Symbol(abc)]: 'myownkey', name: 'viral', 'Full name': 'viral jain', lastLoggedIn: [ 'Mon', 'Tue' ], greeting: [Function: greeting] ,hello:[Function: hello] }
+```
