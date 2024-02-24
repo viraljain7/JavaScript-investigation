@@ -8,8 +8,8 @@ let arry = new Array(1, 2, 4, true);
 arry.push(40);
 arry.push(40);
 arry.pop();
-arry.unshift(23); //not  recommoded
-arry.shift(); //not  recommoded
+arry.unshift(23); //not  recommoded expensive operation
+arry.shift(); //not  recommoded  expensive operation
 console.log(arry);
 console.log(arry.includes(2));
 console.log(arry.indexOf(true));
