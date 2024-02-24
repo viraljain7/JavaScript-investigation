@@ -1,4 +1,4 @@
-## function (video 19)
+## function (video 19 & 20)
 
 ```js
 function name() {
@@ -39,7 +39,7 @@ function loginUserMsg(username = "default") {
 }
 let msg = loginUserMsg();
 console.log(msg);
-// Output: please enter name
+// Output: default is logged in
 ```
 
 ```js
@@ -87,4 +87,97 @@ console.log(way1);
 let way2 = printArr([1, 24, 4]); //direct Array pass as Argument
 console.log(way2);
 // Output: 12
+```
+
+## scope (video 21 & 22)
+
+```js
+var c = 300;
+{
+  let a = 20;
+  const b = 40;
+  var c = 4;
+}
+
+console.log(c); // Output: 4
+// console.log(a); // Scope error
+// console.log(b); // Scope error
+```
+
+### closure
+
+```js
+// Closure
+function one() {
+  const username = "viral";
+
+  function two() {
+    const website = "youtube";
+    console.log(website + username);
+  }
+  two();
+  // console.log(website); // Scope error
+}
+one();
+// console.log(username); // Scope error
+```
+
+```js
+function outerFunction() {
+  // Variable defined in the outer function's scope
+  let outerVariable = "I am from the outer function";
+
+  // Inner function defined within the outer function
+  function innerFunction() {
+    // Inner function has access to the outer variable
+    console.log(outerVariable);
+  }
+
+  // Returning the inner function from the outer function
+  return innerFunction;
+}
+
+// Call the outer function, which returns the inner function
+const innerFunc = outerFunction();
+
+// Execute the inner function, even though the outer function has finished executing
+innerFunc(); // Output: I am from the outer function
+```
+
+### hositing
+
+```js
+console.log(sum1(4)); // Working due to hoisting
+function sum1(num) {
+  return num;
+}
+console.log(sum1(4)); // Output: 4
+
+// console.log(sum2(40)); // Not working
+const sum2 = function (num) {
+  return num;
+};
+console.log(sum2(40)); // Output: 40
+```
+
+```js
+// Example 1: Function Declaration
+console.log(add(2, 3)); // Output: 5 (Works fine due to hoisting)
+
+function add(a, b) {
+  return a + b;
+}
+
+// Example 2: Variable Declaration
+console.log(x); // Output: undefined (Variable declaration is hoisted, but not initialized)
+var x = 10;
+console.log(x); // Output: 10 (Variable assignment is not hoisted)
+
+// Example 3: Function Expression
+// console.log(subtract(5, 3)); // Error: subtract is not defined (Function expression is not hoisted)
+
+var subtract = function (a, b) {
+  return a - b;
+};
+console.log(subtract(5, 3)); // Output: 2 (Works fine after function expression assignment)
 ```
