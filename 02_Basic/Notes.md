@@ -203,3 +203,16 @@ console.log(Object.entries(user));
 // Output: [ [ 'id', 1 ], [ 'name', 'viral' ], [ 'mail', 'veerljain@1234gmail.com' ], [ 'fullname', { fname: 'viral', lname: 'jain', caste: { categroy: 'minority', 'community id': 'Jain' } } ] ]
 console.log(tinderObj.hasOwnProperty("name")); // Output: true
 ```
+
+## object destructing (video 18)
+
+```js
+const course = {
+  courseName: "Js MasterArt",
+  prices: 999,
+  courseInstructor: "hitesh",
+};
+
+const { courseInstructor: instr, courseName: cName, prices } = course;
+console.log(instr, "  ", cName); // Output: hitesh    Js MasterArt
+```
