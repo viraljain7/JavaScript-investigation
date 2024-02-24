@@ -249,3 +249,21 @@ console.log(sumtwooo(14, 4)); // Output: 18
 const sumoo = (num1, num2) => ({ name: "hitrsh" }); // Parentheses required when returning an object
 console.log(sumoo(14, 4)); // Output: { name: 'hitrsh' }
 ```
+
+### IIFE (video 24)
+
+```js
+// Immediately Invoked Function Expression
+(function chai(params) {
+  //named IIFE because function have named as chai
+  console.log("To prevent pollution of the global scope");
+})(); // Semicolon(;) is important
+
+(() => {
+  console.log("hello");
+})();
+
+((name) => {
+  console.log(`hello ${name}`);
+})("nam"); // This is known as a named IIFE
+```

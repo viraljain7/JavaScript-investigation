@@ -1,4 +1,4 @@
-// ImmediatelyInvoked Function Expression
+// Immediately Invoked Function Expression
 (function name(params) {
   console.log("global scope k Pollution ko rokne k leye ");
 })(); //semicolon(;) is important
