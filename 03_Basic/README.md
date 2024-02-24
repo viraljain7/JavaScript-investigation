@@ -181,3 +181,71 @@ var subtract = function (a, b) {
 };
 console.log(subtract(5, 3)); // Output: 2 (Works fine after function expression assignment)
 ```
+
+### arrow and this (video 23)
+
+```js
+const user = {
+  id: 1,
+  name: "viral",
+  mail: "veerljain@1234gmail.com",
+  welcomeMsg: function () {
+    console.log(this);
+    console.log(`${this.name} welcomed`);
+  },
+};
+user.welcomeMsg();
+// Output:
+// { id: 1, name: 'viral', mail: 'veerljain@1234gmail.com', welcomeMsg: [Function: welcomeMsg] }
+// viral welcomed
+
+user.name = "kadam"; //context change
+user.welcomeMsg();
+// Output:
+// { id: 1, name: 'kadam', mail: 'veerljain@1234gmail.com', welcomeMsg: [Function: welcomeMsg] }
+// kadam welcomed
+```
+
+````js
+```js
+console.log(this); // Refer to empty object in Node.js but 'window' in browser (global object)
+````
+
+```js
+function chai() {
+  console.log(this); // undefined
+  let username = "kmd";
+  //   console.log(this.username); // Not accessible because 'this' does not work in regular functions
+}
+chai();
+```
+
+```js
+const arrowFun = () => {
+  console.log(this); // undefined
+  console.log("I am an Arrow Function");
+};
+arrowFun();
+```
+
+```js
+const sumTwo = (num1, num2) => {
+  return num1 + num2;
+};
+console.log(sumTwo(4, 9)); // Output: 13
+```
+
+```js
+const sumtwoo = (num1, num2) => num1 + num2;
+console.log(sumtwoo(1, 4)); // Output: 5
+```
+
+```js
+const sumtwooo = (num1, num2) => num1 + num2; // Parentheses optional for single expression
+console.log(sumtwooo(14, 4)); // Output: 18
+```
+
+```js
+const sumoo = (num1, num2) => ({ name: "hitrsh" }); // Parentheses required when returning an object
+console.log(sumoo(14, 4)); // Output: { name: 'hitrsh' }
+```
