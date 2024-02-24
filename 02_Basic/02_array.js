@@ -1,7 +1,8 @@
-const arr = [1, 2, 3, 4];
-const array = [3, 5, 6, 7];
-const array1 = [30, 50, 60, 70];
-const array2 = [30, 50, 60, 70];
+const arr = ['Iron Man', 'Captain America', 'Thor', 'Hulk']
+const array = ['Thor', 'Black Widow', 'Hawkeye']
+const array1 = ['Spider-Man', 'Black Panther', 'Captain Marvel', 'Doctor Strange']
+const array2 = ['Bat-Man', 'lion', 'Captain MSD', 'Doctor ']
+
 
 let k = [arr, array];
 console.log(k);
@@ -15,9 +16,12 @@ console.log(concatArr);
 
 let concatNewArr = [...array1, ...array2]; //spread operator
 console.log(concatNewArr);
-console.log("before flat :", arr);
-let anotherArr = arr.flat(Infinity); //flat Array
-console.log("After flat :", anotherArr);
+
+
+let givenArr = [1, 2, 3, [4, 6], 7, [8, [9, 0]]];
+let anotherArr = givenArr.flat(Infinity); // Flat array
+console.log("before flat :", givenArr); // before flat : [1, 2, 3, [4, 6], 7, [8, [9, 0]]]
+console.log("After flat :", anotherArr); // After flat : [ 1, 2, 3, 4, 6, 7, 8, 9, 0 ]
 
 //@ Arrays Method learn
 console.log(Array.isArray("hitesh"));
