@@ -145,3 +145,61 @@ Object.freeze(JsUser); // Used to freeze the object
 JsUser.name = "abcdee"; // Not able to change object property
 console.log(JsUser); // Output: { [Symbol(abc)]: 'myownkey', name: 'viral', 'Full name': 'viral jain', lastLoggedIn: [ 'Mon', 'Tue' ], greeting: [Function: greeting] ,hello:[Function: hello] }
 ```
+
+## object part-2 (video 17)
+
+```js
+//Non-singleton object
+const anotherObj = {};
+
+//singleton object
+const tinderObj = new Object();
+
+tinderObj.id = 1;
+tinderObj.name = "viral Jain";
+tinderObj.mail = "veerljain@1234gmail.com";
+
+const user = {
+  id: 1,
+  name: "viral",
+  mail: "veerljain@1234gmail.com",
+  fullname: {
+    fname: "viral",
+    lname: "jain",
+    caste: {
+      categroy: "minority",
+      "community id": "Jain",
+    },
+  },
+};
+console.log(user.fullname.caste["community id"]); // Output: Jain
+
+const obj1 = { 1: "a", 2: "b,", 3: "c" };
+const obj2 = { 4: "aa", 5: "bb,", 6: "cc" };
+const obj3 = { 7: "aaa", 9: "ccc" };
+
+const obj4 = { obj1, obj2, obj3 }; // Problematic
+console.log(obj4);
+// Output: { obj1: { '1': 'a', '2': 'b,', '3': 'c' }, obj2: { '4': 'aa', '5': 'bb,', '6': 'cc' }, obj3: { '7': 'aaa', '9': 'ccc' } }
+
+const obj5 = Object.assign({}, obj1, obj2, obj3); // Using Object.assign to merge objects
+console.log(obj5);
+// Output: { '1': 'a', '2': 'b,', '3': 'c', '4': 'aa', '5': 'bb,', '6': 'cc', '7': 'aaa', '9': 'ccc' }
+
+const obj6 = { ...obj1, ...obj2, ...obj3 }; // Using spread operator to merge objects
+console.log(obj6); // Output: { '1': 'a', '2': 'b,', '3': 'c', '4': 'aa', '5': 'bb,', '6': 'cc', '7': 'aaa', '9': 'ccc' }
+
+const ArrObj = [
+  { id: "a", ob: "b,", 3: "c" },
+  { id: "aa", ob: "bb,", 6: "cc" },
+  { id: "aaa", ob: "ccc" },
+];
+
+console.log(Object.keys(ArrObj[1])); // Output: [ 'id', 'ob', '6' ]
+console.log(Object.keys(user.fullname)); // Output: [ 'fname', 'lname', 'caste' ]
+console.log(Object.values(user));
+// Output: [ 1, 'viral', 'veerljain@1234gmail.com', { fname: 'viral', lname: 'jain', caste: { categroy: 'minority', 'community id': 'Jain' } } ]
+console.log(Object.entries(user));
+// Output: [ [ 'id', 1 ], [ 'name', 'viral' ], [ 'mail', 'veerljain@1234gmail.com' ], [ 'fullname', { fname: 'viral', lname: 'jain', caste: { categroy: 'minority', 'community id': 'Jain' } } ] ]
+console.log(tinderObj.hasOwnProperty("name")); // Output: true
+```
