@@ -28,13 +28,13 @@ const obj1 = { 1: "a", 2: "b,", 3: "c" };
 const obj2 = { 4: "aa", 5: "bb,", 6: "cc" };
 const obj3 = { 7: "aaa", 9: "ccc" };
 
-// const obj4={obj1,obj2,obj3};
+const obj4 = { obj1, obj2, obj3 }; //problematic
 
 // Syntax: Object.assign(target,source1,source2,....)
-// const obj4=Object.assign({},obj1,obj2,obj3); //assign
+const obj5 = Object.assign({}, obj1, obj2, obj3); //assign
 
-// const obj4={...obj1,...obj2,...obj3};// spread
-// console.log(obj4);
+const obj6 = { ...obj1, ...obj2, ...obj3 };// spread
+console.log(obj6);
 
 // Arrays Object
 
