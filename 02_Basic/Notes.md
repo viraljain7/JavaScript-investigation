@@ -23,7 +23,7 @@ let arrToStr = myArr.join(); //join two Array And convert to String
 console.log(arrToStr); // [1,2,4,"true",40]
 ```
 
-````js
+```js
 // Using slice and splice methods
 let myArray = [0, 1, 2, 3, 4, 5, 6, 6];
 
@@ -47,4 +47,61 @@ console.log("Arr: ", myArray); // prints "Arr: " [0, 5, 6, 6] //Original array m
 
 - `slice(startIndex, endIndex):` Returns a shallow copy of a portion of an array into a new array object. The original array remains unchanged.
 - ` splice(startIndex, deleteCount):` Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. It modifies the original array and returns an array containing the deleted elements.
-````
+
+## Array part-2 (video 15)
+
+```javascript
+const arr = ["Iron Man", "Captain America", "Thor", "Hulk"];
+const array = ["Thor", "Black Widow", "Hawkeye"];
+const array1 = [
+  "Spider-Man",
+  "Black Panther",
+  "Captain Marvel",
+  "Doctor Strange",
+];
+const array2 = ["Bat-Man", "lion", "Captain MSD", "Doctor "];
+
+let k = [arr, array];
+console.log(k);
+// output : [
+//   [ 'Iron Man', 'Captain America', 'Thor', 'Hulk' ],
+//   [ 'Thor', 'Black Widow', 'Hawkeye' ]
+//          ]
+
+arr.push(array); // Push method adds data to the same array
+console.log(arr);
+//output : [ 'Iron Man',  'Captain America',  'Thor',  'Hulk',  [ 'Thor', 'Black Widow', 'Hawkeye' ] ]
+console.log(arr[4][3]); //output : Hawkeye
+
+let concatArr = array.concat(array1); // Concat method adds data and returns a new array
+console.log(concatArr);
+//output : [ 'Thor',  'Black Widow',  'Hawkeye',  'Spider-Man',  'Black Panther',  'Captain Marvel',  'Doctor Strange' ]
+
+let concatNewArr = [...array1, ...array2]; // Spread operator
+console.log(concatNewArr);
+//output : [ 'Spider-Man',  'Black Panther',  'Captain Marvel',  'Doctor Strange',  'Bat-Man',  'lion',  'Captain MSD',  'Doctor ' ]
+
+let givenArr = [1, 2, 3, [4, 6], 7, [8, [9, 0]]];
+let anotherArr = givenArr.flat(Infinity); // Flat array
+console.log("before flat :", givenArr); // before flat : [1, 2, 3, [4, 6], 7, [8, [9, 0]]]
+console.log("After flat :", anotherArr); // After flat : [ 1, 2, 3, 4, 6, 7, 8, 9, 0 ]
+```
+
+### Arrays Method learn
+
+```js
+// Check if the argument is an array
+console.log(Array.isArray("hitesh")); // Output: false
+
+// Convert a string to an array of characters
+console.log(Array.from("hitesh")); // Output: [ 'h', 'i', 't', 'e', 's', 'h' ]
+
+// Convert an object to an array (empty array)
+console.log(Array.from({ name: "hitesh" })); // Output: []
+
+// Create a new array with the given arguments
+let score1 = 1,
+  score2 = 2,
+  score3 = 4;
+console.log(Array.of(score1, score2, score3)); // Output: [ 1, 2, 4 ]
+```
