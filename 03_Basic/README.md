@@ -267,3 +267,5 @@ console.log(sumoo(14, 4)); // Output: { name: 'hitrsh' }
   console.log(`hello ${name}`);
 })("nam"); // This is known as a named IIFE
 ```
+
+### execute code + call stack (video 25) watch again
