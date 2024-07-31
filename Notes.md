@@ -9,7 +9,10 @@ async await
 
 - tc39.es
 - mdnjs
--
+
+---
+
+---
 
 # 01 Basics
 
@@ -46,6 +49,10 @@ console.log(nonExistentVariable);
 // ReferenceError: nonExistentVariable is not defined
 ```
 
+---
+
+---
+
 ## Datatypes in JS (video 5)
 
 ## `Data Types`:
@@ -56,16 +63,22 @@ console.log(nonExistentVariable);
 - `null` (Standalone Value, but datatype is object and value is empty)
 - `undefined`
 - `Boolean`
-- `Symbol `(unique)
+- `Symbol`(unique)
 - `Object`
 
 > [!NOTE]
 >
-> `BigInt` (number which exceed 2^52)
+> ### `Data Types` Results
 >
-> `null` (Standalone Value, but `datatype` is object and value is empty)
+> `BigInt` : BigInt
 >
-> `Symbol `(unique)
+> `null` : object
+>
+> `Symbol` : Symbol
+>
+> `Array` : object
+>
+> `undefined` : undefined
 
 ```js
 "use strict"; // treat all JS Code as new version
@@ -86,6 +99,10 @@ console.table([
   typeof bIgInt, //bigint
 ]);
 ```
+
+---
+
+---
 
 ## Conversion (vidoe 6)
 
@@ -123,22 +140,28 @@ console.log(+[]); // Output: 0 (empty array converted to 0)
 console.log(+{}); // Output: NaN (empty object converted to NaN)
 ```
 
-### Type Conversion Summary:
+> [!NOTE]
+>
+> ### Type Conversion Summary:
+>
+> - `ToNumber:`
+> - "11abc" converts to NaN
+> - "11" converts to 11
+> - undefined converts to NaN
+> - true converts to 1
+> - false converts to 0
+> - `ToBoolean:`
+> - Any non-empty (" ", " a") string converts to true
+> - Empty string ("") converts to false
+> - `ToString:`
+> - NaN converts to "NaN"
+> - undefined converts to "undefined"
 
-- `ToNumber:`
-  - "11abc" converts to NaN
-  - "11" converts to 11
-  - undefined converts to NaN
-  - true converts to 1
-  - false converts to 0
-- `ToBoolean:`
-  - Any non-empty string converts to true
-  - Empty string converts to false
-- `ToString:`
-  - NaN converts to "NaN"
-  - undefined converts to "undefined"
+---
 
-## Operation & Comparision (video 7)
+---
+
+## Operation & Comparison (video 7)
 
 ## JavaScript Type Coercion and Comparison
 
