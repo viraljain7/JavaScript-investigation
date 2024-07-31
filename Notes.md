@@ -32,7 +32,9 @@ accCity = "app";
 console.table([accId, accEmail, accIndex, accCity]);
 ```
 
-## Understanding `undefined` and `not defined` in JavaScript
+> [!NOTE]
+>
+> ## Understanding `undefined` and `not defined` in JavaScript
 
 ```javascript
 let variable;
@@ -56,6 +58,12 @@ console.log(nonExistentVariable);
 - `Boolean`
 - `Symbol `(unique)
 - `Object`
+
+> [!NOTE] > `BigInt` (number which exceed 2^52)
+>
+> `null` (Standalone Value, but `datatype` is object and value is empty)
+>
+> `Symbol `(unique)
 
 ```js
 "use strict"; // treat all JS Code as new version
