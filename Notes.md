@@ -59,7 +59,9 @@ console.log(nonExistentVariable);
 - `Symbol `(unique)
 - `Object`
 
-> [!NOTE] > `BigInt` (number which exceed 2^52)
+> [!NOTE]
+>
+> `BigInt` (number which exceed 2^52)
 >
 > `null` (Standalone Value, but `datatype` is object and value is empty)
 >
