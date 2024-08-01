@@ -193,35 +193,39 @@ console.log(undefined >= 0); // Output: false (undefined cannot be compared with
 console.log(undefined == 0); // Output: false (undefined cannot be compared with numbers)
 ```
 
-### Notes: <-------IMP------->
+> [!NOTE] Important
+>
+> - JavaScript performs type coercion when operands of different types are used together.
+> - String concatenation occurs when the "+" operator is used with strings.
+> - Comparison operators convert operands to numbers or strings depending on the context.
+> - `Strict equality (===)` checks both value and type, while loose `equality (==)` only checks value.
+> - Null is treated as 0 in numeric comparisons, but undefined does not have a well-defined behavior in comparisons with numbers.
+> - Comparing undefined with any number always results in false.
+> - Be cautious with loose `equality (==)` as it can lead to unexpected behavior due to type coercion.
 
-- JavaScript performs type coercion when operands of different types are used together.
-- String concatenation occurs when the "+" operator is used with strings.
-- Comparison operators convert operands to numbers or strings depending on the context.
-- `Strict equality (===)` checks both value and type, while loose `equality (==)` only checks value.
-- Null is treated as 0 in numeric comparisons, but undefined does not have a well-defined behavior in comparisons with numbers.
-- Comparing undefined with any number always results in false.
-- Be cautious with loose `equality (==)` as it can lead to unexpected behavior due to type coercion.
+---
 
-## Datatypes Summary (video 9)
+---
 
-### Datatypes in JavaScript
+## Data-types Summary (video 9)
 
-`Primitive` Datatypes `(stored in stack memory)`:
+### Data-types in JavaScript
 
-- string
-- number
-- boolean
-- BigInt
-- undefined
-- null
-- Symbol
+> [!NOTE] `Primitive` Datatypes `(stored in stack memory)`:
+>
+> - string
+> - number
+> - boolean
+> - BigInt
+> - undefined
+> - null
+> - Symbol
 
-`Reference (Non-primitive)` Datatypes `(stored in heap memory)`:
-
-- Array(Object) <-------IMP------->
-- Object
-- Function (object function)
+> [!NOTE] `Reference (Non-primitive)` Datatypes `(stored in heap memory)`:
+>
+> - Array(Object)
+> - Object
+> - Function (object function)
 
 ```js
 let name = "viral"; // string
