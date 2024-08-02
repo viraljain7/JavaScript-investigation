@@ -342,12 +342,14 @@ console.log(mytrim.split("20%")); // Output: ["   viral", "dk    "]
 
 ### 1. slice(startIndex, endIndex)
 
-- Extracts a portion of a string and returns it as a new string.
-- **Key Points:**
-  - `startIndex`: The index at which to begin extraction (inclusive).
-  - `endIndex`: The index before which to end extraction (exclusive).
-  - If `endIndex` is omitted, extraction continues to the end of the string.
-  - Negative indexes count from the end of the string.
+> [!NOTE]
+>
+> - Extracts a portion of a string and returns it as a new string.
+> - **Key Points:**
+> - If startIndex is negative, it is treated as string.length + startIndex.
+> - If endIndex is negative, it is treated as string.length + endIndex.
+> - If endIndex is less than startIndex, an empty string is returned.
+
 - **Examples:**
   ```javascript
   const str = "Hello World";
@@ -358,13 +360,13 @@ console.log(mytrim.split("20%")); // Output: ["   viral", "dk    "]
 
 ### 2. substring(startIndex, endIndex)
 
-- Extracts a portion of a string and returns it as a new string.
-- **Key Points:**
-  - `startIndex:` The index at which to begin extraction (inclusive).
-  - `endIndex`: The index before which to end extraction (exclusive).
-  - If `endIndex` is omitted or less than startIndex, arguments are swapped.
-  - Negative indexes are treated as 0.
-    Examples:
+> [!NOTE]
+>
+> - Extracts a portion of a string and returns it as a new string.
+> - **Key Points:**
+> - If startIndex is greater than endIndex, the method swaps the two values, which means string.substring(5, 2) is equivalent to string.substring(2, 5).
+> - Negative indices are treated as 0.
+> - Does not accept negative values for startIndex and endIndex.
 
 ```javascript
 const str = "Hello World";
