@@ -69,6 +69,31 @@ console.table([
 ]);
 ```
 
+
+### 1. Primitive Data Types (Immutable)
+
+| **Name**      | **Type**      | **Example**                     |
+|---------------|---------------|---------------------------------|
+| Number        | `"number"`    | `let age = 25;`                 |
+| String        | `"string"`    | `let name = "Alice";`           |
+| Boolean       | `"boolean"`   | `let isStudent = true;`         |
+| Undefined     | `"undefined"` | `let x;`                        |
+| Null          | `"object"`    | `let user = null;`              |
+| Symbol        | `"symbol"`    | `let id = Symbol("id");`        |
+| BigInt        | `"bigint"`    | `let bigNum = 12345678901234567890n;` |
+
+---
+
+### 2. Non-Primitive Data Types (Mutable)
+
+| **Name**      | **Type**      | **Example**                     |
+|---------------|---------------|---------------------------------|
+| Object        | `"object"`    | `let person = { name: "Alice" };` |
+| Array         | `"object"`    | `let fruits = ["apple", "banana"];` |
+| Function      | `"function"`  | `function greet() { console.log("Hello!"); }` |
+
+
+
 ## Conversion (vidoe 6)
 
 ## Converting Values in JavaScript
